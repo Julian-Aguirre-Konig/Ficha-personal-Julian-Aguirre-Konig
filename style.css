@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     color: #112D4E;
-    font-family: "roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 /* HEADER */
@@ -39,13 +39,19 @@ section {
     justify-content: center;
 }
 
-span{
-    font-weight: 800;
+h3{
+    font-size: 20px;
 }
 
-.texto {
-    margin-left: 0;
+p {
+    font-size: 18px;
     font-weight: 400;
+    margin-left: 0;
+    text-align: justify;
+}
+
+span{
+    font-weight: 800;
 }
 
 .enlace {
@@ -60,7 +66,6 @@ span{
 
 #ficha {
     width: 100%;
-    /* height: auto; */
     display: flex;
     align-items: center;
 }
@@ -95,7 +100,6 @@ span{
     flex-direction: row;
     gap: 10px;
     align-items: center;
-    font-weight: bold;
     margin-top: .2rem;
     margin-bottom: .2rem;
 }
@@ -145,7 +149,6 @@ footer {
     #contenedor__foto, #contenedor__enlaces {
         width: 100%;
         margin: 1rem 0;
-        padding: 0 1rem;
     }
 
     #foto__alumno {
@@ -153,23 +156,31 @@ footer {
     }
 
     #contenedor__enlaces {
-        align-items: center;
+        align-items: flex-start;
+        width: auto;
+        gap: 10px;
     }
 
     #contenedor__enlaces h3 {
+        font-size: 18px;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: flex-start;
         gap: 10px;
-        margin: .5rem 0;
-        width: 90%;
     }
 
     #contenedor__enlaces p{
         width: auto;
+        margin: 0;
     }
 
-    .texto, .enlace {
+    .texto {
         margin-top: 5px;
         margin-bottom: 5px;
+    }
+
+    .enlace {
+        padding: 0 10px 0 10px;
+        margin: 0;
     }
 }
