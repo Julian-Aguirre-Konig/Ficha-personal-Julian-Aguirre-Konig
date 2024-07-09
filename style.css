@@ -1,4 +1,18 @@
-/* Header */
+/* BODY */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    color: #112D4E;
+    font-family: "roboto", sans-serif;
+}
+
+/* HEADER */
 header {
     background-color: #112D4E;
     padding: 0;
@@ -8,38 +22,30 @@ header {
     align-items: center;
 }
 
-h1{
+h1 {
     padding: 1rem;
     margin: 0;
-    color:#F9F7F7;
+    color: #F9F7F7;
 }
 
-/* Body */
-body {
-    color: #112D4E;
-    font-family: "roboto", sans-serif;
-    padding: 0;
-    margin: 0;
+/* MAIN */
+main{
+    background-color: #DBE2EF;
 }
 
 section {
-    background-color: #DBE2EF;
-    /* width: 100%; */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
-p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 1.1rem;
+span{
+    font-weight: 800;
 }
 
 .texto {
-    margin-left: 0.625rem;
-    font-size: 1.1rem;
+    margin-left: 0;
+    font-weight: 400;
 }
 
 .enlace {
@@ -52,19 +58,16 @@ p {
     margin-right: 1rem;
 }
 
-.sitio__profesional {
-    margin: 0;
-}
-
 #ficha {
     width: 100%;
+    /* height: auto; */
     display: flex;
     align-items: center;
 }
 
 #contenedor__foto {
-    padding: 1rem;
-    margin: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,14 +76,13 @@ p {
 }
 
 #foto__alumno {
-    width: 100%;
+    width: auto;
     height: 100%;
     border-radius: 1rem;
 }
 
 #contenedor__enlaces {
     width: 66%;
-    height: 21.875rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -91,13 +93,14 @@ p {
 #contenedor__enlaces h3 {
     display: flex;
     flex-direction: row;
+    gap: 10px;
     align-items: center;
     font-weight: bold;
     margin-top: .2rem;
     margin-bottom: .2rem;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     background-color: #112D4E;
     width: 100%;
@@ -106,43 +109,67 @@ footer {
 }
 
 #contenedor__logo {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100px;
-    margin: .2rem;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #logo {
     width: 100%;
     height: 100%;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 6px;
-    margin-left: 6px;
 }
 
 /* CSS para vista mobile */
 @media screen and (max-width: 800px) {
+    body {
+        grid-template-rows: auto 1fr auto;
+    }
+
     section {
-        height: 100vh;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     #ficha {
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
 
-    #contenedor__foto {
-        margin: 1rem;
+    #contenedor__foto, #contenedor__enlaces {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+
+    #foto__alumno {
+        width: auto;
+    }
+
+    #contenedor__enlaces {
+        align-items: center;
     }
 
     #contenedor__enlaces h3 {
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-        width: 500px;
-        height: 800px;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+        margin: .5rem 0;
+        width: 90%;
+    }
+
+    #contenedor__enlaces p{
+        width: auto;
+    }
+
+    .texto, .enlace {
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
